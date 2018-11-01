@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.common</groupId>
+    <artifactId>toolkits</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>plugin</artifactId>
+
+  <properties>
+    <properties-maven-plugin.version>1.0.0</properties-maven-plugin.version>
+    <sql-maven-plugin.version>1.5</sql-maven-plugin.version>
+    <org.jooq.version>3.10.8</org.jooq.version>
+    <com.h2database.version>1.4.193</com.h2database.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.alibaba.spring.boot</groupId>
+      <artifactId>dubbo-spring-boot-starter</artifactId>
+      <version>2.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.ctrip.framework.apollo</groupId>
+      <artifactId>apollo-client</artifactId>
+      <version>0.11.2-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>de.codecentric</groupId>
+      <artifactId>spring-boot-admin-starter-client</artifactId>
+      <version>2.0.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.yame.oceans</groupId>
+      <artifactId>yame-rpc-context</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+      <version>3.11.0</version>
+    </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+      </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.shardingsphere/sharding-jdbc-spring-boot-starter -->
+    <dependency>
+      <groupId>io.shardingsphere</groupId>
+      <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+      <version>3.0.0.M1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <version>4.1.28.Final</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.takari/maven-wrapper -->
+    <dependency>
+      <groupId>io.takari</groupId>
+      <artifactId>maven-wrapper</artifactId>
+      <version>0.4.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-1.2-api</artifactId>
+      <version>2.10.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-log4j2</artifactId>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/ma.glasnost.orika/orika-core -->
+    <dependency>
+      <groupId>ma.glasnost.orika</groupId>
+      <artifactId>orika-core</artifactId>
+      <version>1.5.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.1</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/hikari-cp/hikari-cp -->
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jooq</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>${com.h2database.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jolokia</groupId>
+      <artifactId>jolokia-core</artifactId>
+      <version>1.6.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.alibaba.csp/sentinel-core -->
+    <dependency>
+      <groupId>com.alibaba.csp</groupId>
+      <artifactId>sentinel-core</artifactId>
+      <version>0.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba.csp</groupId>
+      <artifactId>sentinel-transport-simple-http</artifactId>
+      <version>0.2.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.caucho/hessian -->
+    <dependency>
+      <groupId>com.caucho</groupId>
+      <artifactId>hessian</artifactId>
+      <version>4.0.51</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.esotericsoftware/kryo -->
+    <dependency>
+      <groupId>com.esotericsoftware</groupId>
+      <artifactId>kryo</artifactId>
+      <version>4.0.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.protostuff/protostuff-core -->
+    <dependency>
+      <groupId>io.protostuff</groupId>
+      <artifactId>protostuff-core</artifactId>
+      <version>1.6.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.protostuff/protostuff-runtime -->
+    <dependency>
+      <groupId>io.protostuff</groupId>
+      <artifactId>protostuff-runtime</artifactId>
+      <version>1.6.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.jooq/jool-java-8 -->
+    <dependency>
+      <groupId>org.jooq</groupId>
+      <artifactId>jool-java-8</artifactId>
+      <version>0.9.14</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>properties-maven-plugin</artifactId>
+        <version>${properties-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <phase>initialize</phase>
+            <goals>
+              <goal>read-project-properties</goal>
+            </goals>
+            <configuration>
+              <files>
+                <file>src/main/resources/intro_config.properties</file>
+              </files>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>sql-maven-plugin</artifactId>
+        <version>${sql-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <phase>initialize</phase>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <driver>${db.driver}</driver>
+              <url>${db.url}</url>
+              <username>${db.username}</username>
+              <password>${db.password}</password>
+              <srcFiles>
+                <srcFile>src/main/resources/intro_schema.sql</srcFile>
+              </srcFiles>
+            </configuration>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${com.h2database.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+      <!--<plugin>-->
+        <!--<groupId>org.jooq</groupId>-->
+        <!--<artifactId>jooq-codegen-maven</artifactId>-->
+        <!--<version>${org.jooq.version}</version>-->
+        <!--<executions>-->
+          <!--<execution>-->
+            <!--<phase>generate-sources</phase>-->
+            <!--<goals>-->
+              <!--<goal>generate</goal>-->
+            <!--</goals>-->
+            <!--<configuration>-->
+              <!--<jdbc>-->
+                <!--<driver>${db.driver}</driver>-->
+                <!--<url>${db.url}</url>-->
+                <!--<username>${db.username}</username>-->
+                <!--<password>${db.password}</password>-->
+              <!--</jdbc>-->
+              <!--<generator>-->
+                <!--<target>-->
+                  <!--<packageName>com.common.toolkit.database.jooq.db</packageName>-->
+                  <!--<directory>src/main/java</directory>-->
+                <!--</target>-->
+              <!--</generator>-->
+            <!--</configuration>-->
+          <!--</execution>-->
+        <!--</executions>-->
+      <!--</plugin>-->
+
+    </plugins>
+  </build>
+</project>

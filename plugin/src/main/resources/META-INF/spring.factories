@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.common.toolkit.httpservice.config.HttpServiceExportAutoConfiguration,\
+com.common.toolkit.httpservice.config.HttpServiceCommonAutoConfiguration,\
+com.common.toolkit.config.apollo.ConstantsAutoChangeConfiguration
