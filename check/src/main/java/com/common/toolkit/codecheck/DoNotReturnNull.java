@@ -44,9 +44,12 @@ public class DoNotReturnNull extends BugChecker implements MethodTreeMatcher {
 
   @Override
   public Description matchMethod(MethodTree tree, VisitorState state) {
-    if (HAS_NULLABLE_ANNOTATION.matches(tree, state)
-        || !CONTAINS_RETURN_NULL.matches(tree.getBody(), state)) {
-      return Description.NO_MATCH;
+    if (HAS_NULLABLE_ANNOTATION.matches(tree, state)) {
+      //除去抽象方法
+      if (tree.getBody() != null && !CONTAINS_RETURN_NULL
+          .matches(tree.getBody(), state)) {
+        return Description.NO_MATCH;
+      }
     }
     return describeMatch(tree);
   }
